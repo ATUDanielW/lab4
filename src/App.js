@@ -1,12 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Content } from './components/content';
-import { Footer } from './components/footer';
-import { Header } from './components/header';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import { Content } from './components/content';
+import { Header } from './components/header';
+import { Create } from './components/create';
+import { Read } from './components/read';
+import { Footer } from './components/footer';
 
 import {
   BrowserRouter as Router,
@@ -31,7 +33,9 @@ class App extends React.Component {
         </Navbar>
       <Routes>
         <Route path='/' element={<Content></Content>}></Route>
-        <Route path='/read' element={<Header></Header>}></Route>
+        <Route path='/read' element={<Read></Read>}></Route>
+        <Route path='/create' element ={<Create></Create>}></Route>
+        
       </Routes>
         {/* <Header></Header>
         <Content></Content>
